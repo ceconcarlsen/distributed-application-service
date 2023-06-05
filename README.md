@@ -1,1 +1,1 @@
-# distributed-application-service
+# [RMI](https://docs.oracle.com/javase/tutorial/rmi/)
