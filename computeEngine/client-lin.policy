@@ -1,0 +1,4 @@
+grant codeBase "file:/Users/cecon/Unesp/CDeP/05/computeEngine" {
+    permission java.net.SocketPermission "localhost:*", "connect,resolve";
+    permission java.security.AllPermission;
+};
