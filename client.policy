@@ -1,4 +1,5 @@
-grant codeBase "file:/Users/cecon/Unesp/CDeP/05/computeEngine" {
+
+grant codeBase "file:/Users/cecon/Unesp/CDeP/distributed-application-service" {
     permission java.net.SocketPermission "localhost:*", "connect,resolve";
     permission java.security.AllPermission;
 };
