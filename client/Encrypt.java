@@ -3,6 +3,8 @@ package client;
 import compute.Task;
 import java.io.Serializable;
 
+//Cifra de César
+
 public class Encrypt implements Task<String>, Serializable {
 
     private static final long serialVersionUID = 227L;

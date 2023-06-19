@@ -37,7 +37,7 @@ public class TCPClient {
                 System.out.println("        Example input: Fibonacci 15\n");
                 System.out.println("    Encrypt <string>\n");
                 System.out.println("        <string>: the string to be encrypted\n");
-                System.out.println("        Example input: Encrypt Hello, World!\n");
+                System.out.println("        Example input: Encrypt Hello,World!\n");
             } else {
                 // Creating string to be sent to the server
                 StringBuilder outString = new StringBuilder();
