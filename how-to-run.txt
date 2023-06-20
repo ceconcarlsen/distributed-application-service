@@ -1,0 +1,35 @@
+- COMPILANDO (macOS):
+
+--HELPERS--
+javac compute/Compute.java compute/Task.java
+jar cvf classes/compute.jar compute/*.class
+javac -cp ./classes/compute.jar engine/ComputeEngine.java
+
+--SERVICES--
+javac -cp ./classes/compute.jar client/MagicSquare.java
+javac -cp ./classes/compute.jar client/Encrypt.java
+javac -cp ./classes/compute.jar client/Fibonacci.java
+javac -cp ./classes/compute.jar client/Sort.java
+
+--SERVER--
+javac -cp ./classes/compute.jar client/TCPServer.java client/Sort.java client/MagicSquare.java client/Fibonacci.java client/Encrypt.java
+
+--CLIENT--
+javac -cp ./classes/compute.jar client/TCPClient.java client/Sort.java client/MagicSquare.java client/Fibonacci.java client/Encrypt.java
+
+- EXECUTAR RMI (NOVO TERMINAL)
+
+set CLASSPATH=/Users/cecon/Unesp/CDeP/distributed-application-service
+rmiregistry 1099
+
+- EXECUTAR COMPUTE ENGINE (NOVO TERMINAL): 
+
+java -cp /Users/cecon/Unesp/CDeP/distributed-application-service:/Users/cecon/Unesp/CDeP/distributed-application-service/classes/compute.jar -Djava.rmi.server.codebase=file:/Users/cecon/Unesp/CDeP/distributed-application-service/classes/compute.jar -Djava.rmi.server.hostname=localhost -Djava.security.policy=server.policy engine.ComputeEngine 1099
+
+- EXECUTAR O SERVIDOR (NOVO TERMINAL): 
+
+java -cp /Users/cecon/Unesp/CDeP/distributed-application-service:/Users/cecon/Unesp/CDeP/distributed-application-service/classes/compute.jar -Djava.rmi.server.codebase=file:/Users/cecon/Unesp/CDeP/distributed-application-service/classes/ -Djava.security.policy=client.policy client.TCPServer
+
+- EXECUTAR O CLIENTE (NOVO TERMINAL):
+
+java -cp /Users/cecon/Unesp/CDeP/distributed-application-service client.TCPClient encrypt CiênciaDaComputação 5
