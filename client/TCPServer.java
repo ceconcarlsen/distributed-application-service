@@ -159,19 +159,19 @@ class Connection extends Thread {
                             "\nVocê escolheu um algoritmo indisponível. Os válidos são:\n- SelectionSort\n- InsertionSort\n- BubbleSort");
                 }
             }
-            else if (dataSeparated[0].toLowerCase().equals("encrypt")) {
-    // Receives a string and a shift value as arguments
-    String originalString = dataSeparated[1];
-    int shift = Integer.parseInt(dataSeparated[2]);
-    Encrypt task = new Encrypt(originalString, shift);
-    String encryptedString = task.execute();
+                else if (dataSeparated[0].toLowerCase().equals("encrypt")) {
+                // Recebe string e o valor de troca
+                String originalString = dataSeparated[1];
+                int shift = Integer.parseInt(dataSeparated[2]);
+                Encrypt task = new Encrypt(originalString, shift);
+                String encryptedString = task.execute();
 
-    System.out.println("\nResposta do serviço Encrypt recebida, enviando ao cliente...");
-    // Sends the encrypted string back to the client
-    out.writeObject(encryptedString);
-    out.flush();
-}
-        } catch (Exception e) {
+                System.out.println("\nResposta do serviço Encrypt recebida, enviando ao cliente...");
+                // Sends the encrypted string back to the client
+                out.writeObject(encryptedString);
+                out.flush();
+}   
+                } catch (Exception e) {
             System.err.println(
                     "\nErro ao executar serviços do servidor - verifique se as entradas do cliente foram corretas. Para ajuda, utilize 'help': \n");
             e.printStackTrace();

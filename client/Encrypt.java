@@ -3,7 +3,13 @@ package client;
 import compute.Task;
 import java.io.Serializable;
 
-//Cifra de César
+/* Cifra de César  
+
+A cifra de César opera substituindo cada letra do texto original por outra letra que está um número fixo de posições adiante ou atrás no alfabeto. 
+Esse número fixo é conhecido como "chave de deslocamento" ou "chave de cifra". 
+Por exemplo, com uma chave de deslocamento de 3, a letra "A" seria substituída pela letra "D", "B" seria substituída por "E", e assim por diante.
+
+*/
 
 public class Encrypt implements Task<String>, Serializable {
 

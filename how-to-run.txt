@@ -32,4 +32,19 @@ java -cp /Users/cecon/Unesp/CDeP/distributed-application-service:/Users/cecon/Un
 
 - EXECUTAR O CLIENTE (NOVO TERMINAL):
 
+HELP
+java -cp /Users/cecon/Unesp/CDeP/distributed-application-service client.TCPClient help
+
+ENCRIPTY
 java -cp /Users/cecon/Unesp/CDeP/distributed-application-service client.TCPClient encrypt CiênciaDaComputação 5
+
+FIBONACCI
+java -cp /Users/cecon/Unesp/CDeP/distributed-application-service client.TCPClient fibonacci 5
+
+SORT (SelectionSort, BubbleSort, InsertionSort)
+java -cp /Users/cecon/Unesp/CDeP/distributed-application-service client.TCPClient sort selectionsort 1 10 2
+
+MAGIC SQUARE
+java -cp /Users/cecon/Unesp/CDeP/distributed-application-service client.TCPClient magicsquare 4
+
+

@@ -325,7 +325,7 @@ public class MagicSquare implements Task<Vector<Vector<Integer>>>, Serializable 
             System.out.println("\nProcessando caso DoublyEven...\n");
             return this.DoublyEven(n);
         }
-        //ordem do tipo (4*n + 2) - 6, 10, 14 - singly even order - TERMINAR
+        //ordem do tipo (4*n + 2) - 6, 10, 14 - singly even order
         else if(n%4 == 2){
             System.out.println("\nProcessando caso SinglyEven...\n");
             return this.SinglyEven(n);

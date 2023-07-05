@@ -14,7 +14,7 @@ public class Fibonacci implements Task<Integer>, Serializable {
         this.n = n;
     }
 
-	//Chama a funcao que faz o magic square
+	//Chama a funcao que faz o fibonnaci
     public Integer execute() {
         return computeFibonacci(n);
     }
